@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Card Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Jeu de mémoire</h1>
+    </header>
+
+    
+
+    <!-- on créé ici notre grille, mais comme tu peux le voir, c'est pas mélangé du tout ! Mais ne t'inquiète pas, app.js s'occupe de tout 
+     Mais tu sais pas le pire ? si on avait voulu, on aurait pu générer tout ça directement avec JS, mais cette page aurait été bien vide, et je vois d'ici la peur dans tes yeux-->
+    <section class="cardboard">
+
+      <!-- tu vois le "data-fruit" ? bizarre comme nom d'attribut ! "data-lenomquevousvoulez" est ce qu'on appelle un attribut universel 
+      et va permettre de faire transiter des données entre HTML et notre script JS ! 
+      Ici on s'en sert pour créer une paire de cartes : si on trouve deux fruits au même data-fruit, alors on a créé une paire valide
+      
+      Un peu de lecture https://developer.mozilla.org/fr/docs/Web/HTML/Global_attributes/data-*
+      -->
+      <div class="card" data-fruit="pommeRouge">
+
+        <!-- l'idée c'est d'avoir deux cartes l'une sur l'autre : une qui sera le devant de la carte et l'autre le derrière : avec un peu de CSS et de JS, on aura l'impression que ce sont qu'une seule carte !  -->
+        <img class="frontCard" src="./images/1.png" alt="pomme rouge">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="pommeRouge">
+        <img class="frontCard" src="./images/1.png" alt="pomme rouge">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="banane">
+        <img class="frontCard" src="./images/2.png" alt="banane">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="banane">
+        <img class="frontCard" src="./images/2.png" alt="banane">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="orange">
+        <img class="frontCard" src="./images/3.png" alt="orange">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="orange">
+        <img class="frontCard" src="./images/3.png" alt="orange">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="citronVert">
+        <img class="frontCard" src="./images/4.png" alt="citron vert">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="citronVert">
+        <img class="frontCard" src="./images/4.png" alt="citron vert">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="baieRouge">
+        <img class="frontCard" src="./images/5.png" alt="baie rouge">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="baieRouge">
+        <img class="frontCard" src="./images/5.png" alt="baie rouge">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="abricot">
+        <img class="frontCard" src="./images/6.png" alt="abricot">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="abricot">
+        <img class="frontCard" src="./images/6.png" alt="abricot">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="citron">
+        <img class="frontCard" src="./images/7.png" alt="citron">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="citron">
+        <img class="frontCard" src="./images/7.png" alt="citron">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="pommeVerte">
+        <img class="frontCard" src="./images/8.png" alt="pomme verte">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="pommeVerte">
+        <img class="frontCard" src="./images/8.png" alt="pommeVerte">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="fraise">
+        <img class="frontCard" src="./images/9.png" alt="fraise">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="fraise">
+        <img class="frontCard" src="./images/9.png" alt="fraise">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="peche">
+        <img class="frontCard" src="./images/10.png" alt="peche">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="peche">
+        <img class="frontCard" src="./images/10.png" alt="peche">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="raisin">
+        <img class="frontCard" src="./images/11.png" alt="raisin">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="raisin">
+        <img class="frontCard" src="./images/11.png" alt="raisin">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="pasteque">
+        <img class="frontCard" src="./images/12.png" alt="pasteque">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="pasteque">
+        <img class="frontCard" src="./images/12.png" alt="pasteque">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="prune">
+        <img class="frontCard" src="./images/13.png" alt="prune">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="prune">
+        <img class="frontCard" src="./images/13.png" alt="prune">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="poire">
+        <img class="frontCard" src="./images/14.png" alt="poire">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="poire">
+        <img class="frontCard" src="./images/14.png" alt="poire">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="cerises">
+        <img class="frontCard" src="./images/15.png" alt="cerises">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+      <div class="card" data-fruit="cerises">
+        <img class="frontCard" src="./images/15.png" alt="cerises">
+        <img class="backCard" src="./images/oclock.png" alt="Logo O'Clock">
+      </div>
+
+    </section>
+
+    <!-- Ici on va mettre les informations utiles pour le joueur, comme la barre du timer, le nombre de mouvements qu'il a effectué, et les highscore
+    C'est plutôt vide... bizarre...
+    Pas très utile, puisque j'affiche rien :o
+    
+    Trève de plaisanteries, on a app.js pour ça !
+    -->
+    <section class="status">
+
+      <div class="notStarted">Pour démarrer le timer, commencez à jouer !</div>
+
+      <div class="progression">
+        <div class="timeProgression"></div>
+      </div>
+
+      <div class="moves"></div>
+
+      <div class="highscores"></div>
+
+    </section>
+
+    <script src="app.js"></script>
+  </div>
+</body>
+
+</html>

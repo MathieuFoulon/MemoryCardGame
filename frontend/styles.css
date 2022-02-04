@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-image: linear-gradient(45deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%, rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%, rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%, rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%, rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%), linear-gradient(0deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%, rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%, rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%, rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%, rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%), linear-gradient(135deg, rgb(144, 100, 159) 0%, rgb(144, 100, 159) 24%, rgb(112, 112, 163) 24%, rgb(112, 112, 163) 28%, rgb(79, 124, 166) 28%, rgb(79, 124, 166) 40%, rgb(47, 136, 170) 40%, rgb(47, 136, 170) 84%, rgb(14, 148, 173) 84%, rgb(14, 148, 173) 100%), linear-gradient(90deg, rgb(79, 35, 157), rgb(43, 171, 222));
+  background-blend-mode: overlay, overlay, overlay, normal;
+  justify-content: center;
+  color: white ;
+}
+
+h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 46px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.notStarted {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.progression {
+  width: 100%;
+  border-radius: 9999px;
+  background-color: rgb(214, 19, 19);
+  visibility: hidden
+}
+
+.timeProgression {
+  width: 1%;
+  height: 30px;
+  background-color: green;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 9999px;
+}
+
+.moves {
+  text-align: center;
+  font-size: 18px;
+  margin: 5px auto;
+}
+
+.singleScore {
+  text-align: center;
+}
+
+
+.cardboard {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* amusez-vous à changer la valeur, vous allez vous marrer */
+  perspective: 2000px; 
+}
+
+.card {
+  width: calc(16% - 10px);
+  height: calc(16% - 10px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  transform: scale(1);
+  /* ça va permettre de jouer avec le z-index */
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card:active {
+  transform: scale(0.95);
+  transition: transform .1s;
+}
+
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.backCard,
+.frontCard {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  background: transparent;
+  /* de base quand on retourne la carte, on la voit en mode mirroir */
+  backface-visibility: hidden;
+}
+
+/* ça nous permet d'afficher la carte avec le fruit */
+.frontCard {
+  transform: rotateY(180deg);
+}
+
+/* quand on valide une paire  */
+.frontCard.validated {
+  background: linear-gradient(90deg, rgb(173, 173, 173), rgb(129, 129, 129)), linear-gradient(90deg, rgb(91, 131, 23) 0%, rgb(91, 131, 23) 65%, rgb(110, 144, 39) 65%, rgb(110, 144, 39) 67%, rgb(128, 157, 55) 67%, rgb(128, 157, 55) 71%, rgb(147, 169, 70) 71%, rgb(147, 169, 70) 74%, rgb(165, 182, 86) 74%, rgb(165, 182, 86) 93%, rgb(184, 195, 102) 93%, rgb(184, 195, 102) 100%), linear-gradient(67.5deg, rgb(91, 131, 23) 0%, rgb(91, 131, 23) 65%, rgb(110, 144, 39) 65%, rgb(110, 144, 39) 67%, rgb(128, 157, 55) 67%, rgb(128, 157, 55) 71%, rgb(147, 169, 70) 71%, rgb(147, 169, 70) 74%, rgb(165, 182, 86) 74%, rgb(165, 182, 86) 93%, rgb(184, 195, 102) 93%, rgb(184, 195, 102) 100%), linear-gradient(157.5deg, rgb(91, 131, 23) 0%, rgb(91, 131, 23) 65%, rgb(110, 144, 39) 65%, rgb(110, 144, 39) 67%, rgb(128, 157, 55) 67%, rgb(128, 157, 55) 71%, rgb(147, 169, 70) 71%, rgb(147, 169, 70) 74%, rgb(165, 182, 86) 74%, rgb(165, 182, 86) 93%, rgb(184, 195, 102) 93%, rgb(184, 195, 102) 100%);
+  background-blend-mode: overlay, overlay, overlay, normal;
+
+}
+
+/* quand on a faux */
+.frontCard.wrong {
+  background: linear-gradient(135deg, rgb(222, 129, 25) 0%, rgb(222, 129, 25) 10%, rgb(201, 113, 31) 10%, rgb(201, 113, 31) 23%, rgb(181, 97, 38) 23%, rgb(181, 97, 38) 26%, rgb(160, 82, 44) 26%, rgb(160, 82, 44) 27%, rgb(139, 66, 50) 27%, rgb(139, 66, 50) 38%, rgb(119, 50, 57) 38%, rgb(119, 50, 57) 54%, rgb(98, 34, 63) 54%, rgb(98, 34, 63) 100%), linear-gradient(45deg, rgb(222, 129, 25) 0%, rgb(222, 129, 25) 10%, rgb(201, 113, 31) 10%, rgb(201, 113, 31) 23%, rgb(181, 97, 38) 23%, rgb(181, 97, 38) 26%, rgb(160, 82, 44) 26%, rgb(160, 82, 44) 27%, rgb(139, 66, 50) 27%, rgb(139, 66, 50) 38%, rgb(119, 50, 57) 38%, rgb(119, 50, 57) 54%, rgb(98, 34, 63) 54%, rgb(98, 34, 63) 100%), linear-gradient(0deg, rgb(222, 129, 25) 0%, rgb(222, 129, 25) 10%, rgb(201, 113, 31) 10%, rgb(201, 113, 31) 23%, rgb(181, 97, 38) 23%, rgb(181, 97, 38) 26%, rgb(160, 82, 44) 26%, rgb(160, 82, 44) 27%, rgb(139, 66, 50) 27%, rgb(139, 66, 50) 38%, rgb(119, 50, 57) 38%, rgb(119, 50, 57) 54%, rgb(98, 34, 63) 54%, rgb(98, 34, 63) 100%), linear-gradient(90deg, rgb(163, 190, 151), rgb(250, 185, 29));
+  background-blend-mode: overlay, overlay, overlay, normal;
+}
