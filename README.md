@@ -2,7 +2,7 @@
 
 Pour rester dans le thème du cours sur les API d' O'Clock, on va rester sur le microframework Lumen !
 
-L'installation va être plutôt simple, on se fait un petit coup de `composer install`, on crée son fichier `.env` avec les infos nécéssaires ( voir le `.env.example`)
+L'installation va être plutôt simple, on se place dans le dossier `backend`, on se fait un petit coup de `composer install`, on crée son fichier `.env` avec les infos nécéssaires ( voir le `.env.example`)
 Ensuite, un petit tout sur Adminer, et on se crée notre base de données "memorygame" !
 On y insère une table "highscores" avec 5 champs : 
 - "id" en int auto-increment
@@ -13,7 +13,7 @@ On y insère une table "highscores" avec 5 champs :
 
 Je vous propose ensuite de créer 4 donnés, histoire d'avoir quelque chose à afficher pour le front ( mettez des valeurs farfelues sur "score" au dessus de 90, comme ça vous aurez plus de chance d'apparaître dedans lors de vos prochaines parties :D )
 
-Et voilà ! On peut lancer notre petit serveur PHP avec la commande `php -S 0.0.0.0:8080 -t backend/public` !
+Et voilà ! On peut lancer notre petit serveur PHP avec la commande `php -S 0.0.0.0:8080 -t public`  ( toujours depuis le dossier `backend`!
 
 # Frontend
 
