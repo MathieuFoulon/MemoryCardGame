@@ -20,6 +20,10 @@ h1 {
   margin-top: 20px;
 }
 
+.status {
+  margin-top: 60px;
+}
+
 .notStarted {
   font-size: 18px;
   text-align: center;
@@ -54,8 +58,8 @@ h1 {
 
 
 .cardboard {
-  width: 600px;
-  height: 600px;
+  width: 320px;
+  height: 320px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -66,8 +70,8 @@ h1 {
 }
 
 .card {
-  width: calc(16% - 10px);
-  height: calc(16% - 10px);
+  width: calc(20% - 10px);
+  height: calc(20% - 10px);
   margin: 5px;
   position: relative;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
@@ -99,7 +103,7 @@ h1 {
   position: absolute;
   border-radius: 5px;
   background: transparent;
-  /* de base quand on retourne la carte, on la voit en mode mirroir */
+  /* de base quand on retourne la carte, on la voit en mode mirroir, et ce n'est pas ce qu'on veut ! */
   backface-visibility: hidden;
 }
 
@@ -119,4 +123,19 @@ h1 {
 .frontCard.wrong {
   background: linear-gradient(135deg, rgb(222, 129, 25) 0%, rgb(222, 129, 25) 10%, rgb(201, 113, 31) 10%, rgb(201, 113, 31) 23%, rgb(181, 97, 38) 23%, rgb(181, 97, 38) 26%, rgb(160, 82, 44) 26%, rgb(160, 82, 44) 27%, rgb(139, 66, 50) 27%, rgb(139, 66, 50) 38%, rgb(119, 50, 57) 38%, rgb(119, 50, 57) 54%, rgb(98, 34, 63) 54%, rgb(98, 34, 63) 100%), linear-gradient(45deg, rgb(222, 129, 25) 0%, rgb(222, 129, 25) 10%, rgb(201, 113, 31) 10%, rgb(201, 113, 31) 23%, rgb(181, 97, 38) 23%, rgb(181, 97, 38) 26%, rgb(160, 82, 44) 26%, rgb(160, 82, 44) 27%, rgb(139, 66, 50) 27%, rgb(139, 66, 50) 38%, rgb(119, 50, 57) 38%, rgb(119, 50, 57) 54%, rgb(98, 34, 63) 54%, rgb(98, 34, 63) 100%), linear-gradient(0deg, rgb(222, 129, 25) 0%, rgb(222, 129, 25) 10%, rgb(201, 113, 31) 10%, rgb(201, 113, 31) 23%, rgb(181, 97, 38) 23%, rgb(181, 97, 38) 26%, rgb(160, 82, 44) 26%, rgb(160, 82, 44) 27%, rgb(139, 66, 50) 27%, rgb(139, 66, 50) 38%, rgb(119, 50, 57) 38%, rgb(119, 50, 57) 54%, rgb(98, 34, 63) 54%, rgb(98, 34, 63) 100%), linear-gradient(90deg, rgb(163, 190, 151), rgb(250, 185, 29));
   background-blend-mode: overlay, overlay, overlay, normal;
+}
+
+/* au dela de 768px : et oui, on est en mobile-first ! */
+@media screen and (min-width: 768px) {
+  .cardboard {
+    width: 600px;
+    height: 600px;
+
+  }
+
+  .card {
+    width: calc(16% - 10px);
+    height: calc(16% - 10px);
+
+  }
 }
