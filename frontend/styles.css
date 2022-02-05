@@ -33,16 +33,16 @@ h1 {
 .progression {
   width: 100%;
   border-radius: 9999px;
-  background-color: rgb(214, 19, 19);
-  visibility: hidden
+  /* background-color: rgb(214, 19, 19); */
+  background-image: linear-gradient(314deg, rgb(214, 62, 37) 0%, rgb(214, 62, 37) 21%,rgb(188, 52, 42) 21%, rgb(188, 52, 42) 45%,rgb(162, 43, 46) 45%, rgb(162, 43, 46) 46%,rgb(135, 33, 51) 46%, rgb(135, 33, 51) 53%,rgb(109, 23, 55) 53%, rgb(109, 23, 55) 100%),linear-gradient(224deg, rgb(214, 62, 37) 0%, rgb(214, 62, 37) 21%,rgb(188, 52, 42) 21%, rgb(188, 52, 42) 45%,rgb(162, 43, 46) 45%, rgb(162, 43, 46) 46%,rgb(135, 33, 51) 46%, rgb(135, 33, 51) 53%,rgb(109, 23, 55) 53%, rgb(109, 23, 55) 100%),linear-gradient(314deg, rgb(214, 62, 37) 0%, rgb(214, 62, 37) 21%,rgb(188, 52, 42) 21%, rgb(188, 52, 42) 45%,rgb(162, 43, 46) 45%, rgb(162, 43, 46) 46%,rgb(135, 33, 51) 46%, rgb(135, 33, 51) 53%,rgb(109, 23, 55) 53%, rgb(109, 23, 55) 100%),linear-gradient(269deg, rgb(231, 246, 161),rgb(106, 17, 158)); background-blend-mode:overlay,overlay,overlay,normal;
+  visibility: hidden;
+  margin: 0 auto;
 }
 
 .timeProgression {
   width: 1%;
   height: 30px;
-  background-color: green;
-  text-align: center;
-  line-height: 30px;
+  background-image: radial-gradient(circle at 72% 95%, hsla(313,0%,4%,0.07) 0%, hsla(313,0%,4%,0.07) 64%,transparent 64%, transparent 84%,transparent 84%, transparent 100%),radial-gradient(circle at 31% 30%, hsla(313,0%,4%,0.07) 0%, hsla(313,0%,4%,0.07) 49%,transparent 49%, transparent 51%,transparent 51%, transparent 100%),radial-gradient(circle at 72% 25%, hsla(313,0%,4%,0.07) 0%, hsla(313,0%,4%,0.07) 37%,transparent 37%, transparent 76%,transparent 76%, transparent 100%),radial-gradient(circle at 71% 16%, hsla(313,0%,4%,0.07) 0%, hsla(313,0%,4%,0.07) 2%,transparent 2%, transparent 21%,transparent 21%, transparent 100%),radial-gradient(circle at 52% 57%, hsla(313,0%,4%,0.07) 0%, hsla(313,0%,4%,0.07) 30%,transparent 30%, transparent 68%,transparent 68%, transparent 100%),linear-gradient(135deg, rgb(19, 185, 65),rgb(57, 60, 25));  line-height: 30px;
   border-radius: 9999px;
 }
 
