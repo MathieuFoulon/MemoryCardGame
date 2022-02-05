@@ -11,7 +11,7 @@ On y insère une table "highscores" avec 5 champs :
 - "created_at" en datetime
 - "updated_at" en datetime
 
-Je vous propose ensuite de créer 4 donnés, histoire d'avoir quelque chose à afficher pour le front ( mettez des valeurs farfelues sur "score" au dessus de 90, comme ça vous aurez plus de chance d'apparaître dedans lors de vos prochaines parties :D )
+Je vous propose ensuite de créer 4 données, histoire d'avoir quelque chose à afficher pour le front ( mettez des valeurs farfelues sur "score" au dessus de 90, comme ça vous aurez plus de chance d'apparaître dedans lors de vos prochaines parties :D )
 
 Et voilà ! On peut lancer notre petit serveur PHP avec la commande `php -S 0.0.0.0:8080 -t public`  ( toujours depuis le dossier `backend`!
 
