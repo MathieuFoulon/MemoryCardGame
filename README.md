@@ -27,5 +27,6 @@ Alors on flippe pas, on essaye le jeu, on lit le code doucement, y a plein de co
 
 J'espère aussi que vous aimez les fruits, parce que perso, j'en peux plus.
 
-Aller hop, on va dans sur notre localhost chercher le dossier `frontend/public` de ce projet, et je vous souhaite une bonne partie !
+Petit travail à faire : le fichier index.html est un peu long non ? Il doit bien y avoir moyen, grâce à JavaScript, de réduire sa taille... 
 
+Aller hop, on va dans sur notre localhost chercher le dossier `frontend/public` de ce projet, et je vous souhaite une bonne partie et bon courage !
