@@ -2,7 +2,7 @@
 
 Pour rester dans le thème du cours sur les API d' O'Clock, on va rester sur le microframework Lumen !
 
-L'installation va être plutôt simple, on se place dans le dossier `backend`, on se fait un petit coup de `composer install`, on crée son fichier `.env` avec les infos nécéssaires ( voir le `.env.example`)
+L'installation va être plutôt simple, on se place dans le dossier `backend`, on se fait un petit coup de `composer install`, on crée son fichier `.env` avec les infos nécessaires ( voir le `.env.example`)
 Ensuite, un petit tout sur Adminer, et on se crée notre base de données "memorygame" !
 On y insère une table "highscores" avec 5 champs : 
 - "id" en int auto-increment
