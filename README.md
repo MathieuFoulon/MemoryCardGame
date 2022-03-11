@@ -1,3 +1,5 @@
+Memory card game réalisé pour un test technique de l'école O'Clock.
+
 # Backend
 
 Pour rester dans le thème du cours sur les API d' O'Clock, on va rester sur le microframework Lumen !
